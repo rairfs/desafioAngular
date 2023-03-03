@@ -14,17 +14,6 @@ export class CpfService {
    }
 
    buscarPessoa(cpf: string): Pessoa | undefined{
-    // this.pessoas.forEach(p => {
-    //   if (p.cpf == cpf){
-    //     console.log('Entrei no if');
-    //     return p;
-    //   } else {
-    //     console.log('Entrei no else');
-    //     return null;
-    //   }
-    // })
-    // console.log('Ainda assim vim pra fora do for');
-    // return null;
     for (let i = 0; i < this.pessoas.length; i++){
       if (this.pessoas.at(i)?.cpf == cpf){
         return this.pessoas.at(i);

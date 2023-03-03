@@ -1,0 +1,119 @@
+.container-geral {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    font-size: small;
+}
+
+.card-pessoa {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 1%;
+    width: 17.4%;
+    justify-content: space-around;
+    box-shadow: 0px 0px 2px black;
+}
+
+.card-pessoa .titulo {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-pessoa .titulo :first-child {
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.card-pessoa .titulo :nth-child(2) {
+    color: gray;
+}
+
+.card-pessoa .container-nome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-pessoa .container-nome mat-icon {
+    color: gray;
+    width: max-content;
+}
+
+.card-pessoa .container-nome .nome {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-pessoa .container-status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-pessoa .container-status mat-icon {
+    color: green;
+    width: max-content;
+}
+
+.card-pessoa .container-status .status {
+    display: flex;
+    flex-direction: column;
+}
+
+.contas {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+}
+
+.card-conta {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    padding: 1%;
+    gap: 10px;
+    width: 17%;
+    justify-content: space-around;
+    box-shadow: 0px 0px 2px black;
+}
+
+.card-conta .tipo-conta {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-conta .tipo-conta :first-child{
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.card-conta .tipo-conta :nth-child(2){
+    color: gray;
+}
+
+.card-conta .container-dados {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-conta .container-dados mat-icon {
+    color: gray;
+    width: max-content;
+}
+
+.card-conta .container-dados .dados-conta {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-conta a {
+    color: #0a3c52;
+    font-weight: bold;
+}

@@ -28,18 +28,15 @@ export class TelaConsultaComponent implements OnInit {
 
   onConsultar(){
     if (this.cpf.length < 14) {
-      this.mensagemErro = 'CPF Inválido'
-      console.log('Dentro do primeiro if?')
-      return
+      this.mensagemErro = 'CPF Inválido';
+      return;
     }
     const cpfSemPontos = this.removePontos(this.cpf);
 
     if (this.validaCpf(cpfSemPontos)){
       this.pessoa = this.cpfService.buscarPessoa(cpfSemPontos);
-      console.log(this.pessoa);
       if (!this.pessoa) {
         this.mensagemErro = 'CPF não encontrado!';
-        console.log('CPF não encontrado!');
       } else {
         this.isCpfValido = true;
         this.mensagemErro = '';

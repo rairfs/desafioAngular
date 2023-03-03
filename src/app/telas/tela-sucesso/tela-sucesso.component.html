@@ -1,1 +1,38 @@
-<p>tela-sucesso works!</p>
+<div *ngIf="pessoa" class="container-geral">
+    <div class="card-pessoa">
+        <div class="titulo">
+            <p>Situação Cadastral do CPF</p>
+            <p>Consulta na Receita Federal</p>
+        </div>
+        <div class="container-nome">
+            <mat-icon>person</mat-icon>
+            <div class="nome">
+                <p>Nome</p>
+                <p>{{pessoa.nome}}</p>
+            </div>
+        </div>
+        <div class="container-status">
+            <mat-icon>check_circle</mat-icon>
+            <div class="status">
+                <p>Situação do CPF</p>
+                <p>{{pessoa.situacaoCpf}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="contas" *ngIf="pessoa.contas.length > 0">
+        <div class="card-conta" *ngFor="let conta of pessoa.contas">
+            <div class="tipo-conta">
+                <p>{{conta.tipo}}</p>
+                <p>{{conta.banco}}</p>
+            </div>
+            <div class="container-dados">
+                <mat-icon>credit_card</mat-icon>
+                <div class="dados-conta">
+                    <p>Número da conta</p>
+                    <p>{{conta.numero}}</p>
+                </div>
+            </div>
+            <a href="" (click)="duplicarConta()">Duplicar conta</a>
+        </div>
+    </div>
+</div>
