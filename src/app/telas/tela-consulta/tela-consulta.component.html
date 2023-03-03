@@ -1,0 +1,82 @@
+<div class="all">
+    <div class="topo">
+        <div class="titulo">
+            <h1>{{titulo}}</h1>
+            <h6>{{caminho}}</h6>
+        </div>
+        <div class="conta">
+            
+        </div>
+    </div>
+    <div class="corpo">
+        <ul class="barra-progresso">
+            <li class="step step1">Início</li>
+            <li class="step step2">Documentos</li>
+            <li class="step step3">Dados cadastrais</li>
+            <li class="step step4">Admissão</li>
+        </ul>
+
+        <div class="pesquisa-cpf">
+            <div class="info">
+                <h3>Informe o CPF do futuro cooperado (a)</h3>
+                <h6>Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente. Digite apenas os números (sem pontos ou traços).</h6>
+            </div>
+            <div class="campos-pesquisa">
+                <div class="input">
+                    <label for="">CPF</label>
+                    <input (input)="formataInput()" [(ngModel)]="cpf" type="text" name="cpf" maxlength="14">
+                </div>
+                <button (click)="onConsultar()" [class.valido]="isCpfValido" [disabled]="isCpfValido">Consultar por CPF</button>
+            </div>
+            <div class="resultado">
+                <div class="erro" *ngIf="mensagemErro.length > 0">
+                    <p>{{mensagemErro}}</p>
+                </div>
+                <div class="sucesso" *ngIf="pessoa">
+                    <div class="card-pessoa">
+                        <div class="titulo">
+                            <p>Situação Cadastral do CPF</p>
+                            <p>Consulta na Receita Federal</p>
+                        </div>
+                        <div class="container-nome">
+                            <mat-icon>person</mat-icon>
+                            <div class="nome">
+                                <p>Nome</p>
+                                <p>{{pessoa.nome}}</p>
+                            </div>
+                        </div>
+                        <div class="container-status">
+                            <mat-icon>check_circle</mat-icon>
+                            <div class="status">
+                                <p>Situação do CPF</p>
+                                <p>{{pessoa.situacaoCpf}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contas" *ngIf="pessoa.contas.length > 0">
+                        <div class="card-conta" *ngFor="let conta of pessoa.contas">
+                            <div>
+                                <p>{{conta.tipo}}</p>
+                                <p>{{conta.banco}}</p>
+                            </div>
+                            <div>
+                                <mat-icon>credit_card</mat-icon>
+                                <div>
+                                    <p>Número da conta</p>
+                                    <p>{{conta.numero}}</p>
+                                </div>
+                            </div>
+                            <a href="" (click)="duplicarConta()">Duplicar conta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="botoes">
+        <div class="btn-box">
+            <button>Iniciar nova admissão</button>
+            <button>Dicas para abertura da conta</button>
+        </div>
+    </div>
+</div>
