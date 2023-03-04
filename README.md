@@ -27,6 +27,9 @@ Durante a criação dos componentes e páginas, fiz o uso do router-outlet para 
 
 ### Autor
 Raí Rafael Santos Silva 
+
 Email: rairafaelss@gmail.com
+
+
 
 ![Foguete](/src/assets/rocket.png)
