@@ -4,6 +4,10 @@
     flex-direction: row;
 }
 
+app-nav {
+    width: var(--tamanho-nav);
+}
+
 .all {
     width: 100%;
 }

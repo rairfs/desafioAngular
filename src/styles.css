@@ -12,6 +12,7 @@
     --tamanho-corpo: 83vh;
     --azul-ailos: #0a3c52;
     --background-ailos-1: #e7eef1;
+    --tamanho-nav: 4%;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

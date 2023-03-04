@@ -13,3 +13,7 @@
     background-color: var(--background-ailos-1);
     height: var(--tamanho-corpo);
 }
+
+app-nav {
+    width: var(--tamanho-nav);
+}
