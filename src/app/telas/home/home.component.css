@@ -12,6 +12,7 @@
 .all .corpo{
     background-color: var(--background-ailos-1);
     height: var(--tamanho-corpo);
+    padding: 1%;
 }
 
 app-nav {

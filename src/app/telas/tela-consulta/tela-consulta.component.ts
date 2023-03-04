@@ -9,18 +9,13 @@ import { CpfService } from 'src/app/services/cpf-service.service';
 })
 export class TelaConsultaComponent implements OnInit {
 
-  @Input() titulo: string;
-  @Input() caminho: string;
   pagina?: number;
   isCpfValido: boolean = false;
   cpf: string = '';
   mensagemErro: string = '';
   pessoa?: Pessoa | null;
   
-  constructor(private cpfService: CpfService){
-    this.titulo = "NOVA ADMISSÃO COOPERADO";
-    this.caminho = "Cadastro / Admissão do Cooperado / Nova Admissão do Cooperado"
-  }
+  constructor(private cpfService: CpfService){}
 
   ngOnInit(): void {
     
@@ -28,7 +23,7 @@ export class TelaConsultaComponent implements OnInit {
 
   onConsultar(){
     if (this.cpf.length < 14) {
-      this.mensagemErro = 'CPF Inválido';
+      this.mensagemErro = 'CPF Inválido!';
       return;
     }
     const cpfSemPontos = this.removePontos(this.cpf);
@@ -43,7 +38,7 @@ export class TelaConsultaComponent implements OnInit {
       }
       return;
     }
-    this.mensagemErro = 'CPF Inválido';
+    this.mensagemErro = 'CPF Inválido!';
   }
 
   removePontos(cpfComPontos: string): string{
