@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class NotificacaoComponent {
 
+  notificacoes: string[];
+
+  constructor() {
+    this.notificacoes = ['Notificação 1', 'Notificação 2', 'Notificação 3', 'Notificação 4'];
+  }
+
 }

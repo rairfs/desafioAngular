@@ -4,12 +4,15 @@
         <h6>{{caminho}}</h6>
     </div>
     <div class="dados-usuario">
-        <mat-icon>notifications_none</mat-icon>
+        <div class="notification-container" appClickedOutside (clickedOutside)="onFocusNotificationsOut()">
+            <mat-icon (click)="onFocusNotificationsIn()">notifications_none</mat-icon>
+            <app-notificacao *ngIf="isUserNotificationActive"></app-notificacao>
+        </div>
         <div class="viacredi">
             <p>VIACREDI</p>
         </div>
-        <div class="user-container">
-            <img src="../../../assets/acc.jpg" alt="User">
+        <div class="user-container" appClickedOutside (clickedOutside)="onFocusUserOut()">
+            <img src="../../../assets/acc.jpg" alt="User" (click)="onFocusUserIn()">
             <app-usuario *ngIf="isUserBarActive"></app-usuario>
         </div>
     </div>

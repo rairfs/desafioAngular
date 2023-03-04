@@ -19,6 +19,7 @@ import { Tela5Component } from './telas/tela5/tela5.component';
 import { Tela6Component } from './telas/tela6/tela6.component';
 import { NotificacaoComponent } from './components/notificacao/notificacao.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+import { ClickedOutsideDirective } from './directives/clicked-outside.directive';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { UsuarioComponent } from './components/usuario/usuario.component';
     Tela5Component,
     Tela6Component,
     NotificacaoComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    ClickedOutsideDirective
   ],
   imports: [
     BrowserModule,

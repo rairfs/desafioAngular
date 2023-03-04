@@ -50,7 +50,7 @@
     min-width: max-content;
 }
 
-.dados-usuario mat-icon:hover {
+.dados-usuario mat-icon {
     cursor: pointer;
 }
 
@@ -59,3 +59,19 @@
     flex-direction: column;
 }
 
+app-usuario {
+    position: absolute;
+    left: 92.5%;
+    top: 6.5%
+}
+
+.notification-container {
+    display: flex;
+    flex-direction: column;
+}
+
+app-notificacao {
+    position: absolute;
+    left: 87.8%;
+    top: 6.5%
+}

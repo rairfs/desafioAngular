@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5%;
+    background-color: var(--azul-ailos);
+}
+
+.container a {
+    color: white;
+    text-align: center;
+    height: 2rem;
+    width: 7rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container a:hover {
+    background-color: #14759e;
+}

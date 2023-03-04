@@ -206,4 +206,8 @@ input:focus{
     cursor: pointer;
 }
 
+.resultado .erro p {
+    color: rgb(131, 19, 19);
+}
+
 

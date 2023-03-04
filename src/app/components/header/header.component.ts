@@ -11,19 +11,29 @@ export class HeaderComponent {
   @Input() caminho: string;
 
   isUserBarActive: boolean;
+  isUserNotificationActive: boolean;
 
   constructor() {
     this.titulo = '';
     this.caminho = '';
     this.isUserBarActive = false;
+    this.isUserNotificationActive = false;
   }
 
-  onFocusOut() {
+  onFocusUserOut() {
     this.isUserBarActive = false;
   }
 
-  onFocusIn() {
-    this.isUserBarActive = !this.isUserBarActive;
+  onFocusUserIn() {
+    this.isUserBarActive = true;
+  }
+
+  onFocusNotificationsOut(){
+    this.isUserNotificationActive = false;
+  }
+
+  onFocusNotificationsIn(){
+    this.isUserNotificationActive = true;
   }
 
 }
