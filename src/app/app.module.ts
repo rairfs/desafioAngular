@@ -4,19 +4,21 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TelaSucessoComponent } from './telas/tela-sucesso/tela-sucesso.component';
+import { TelaSucessoComponent } from './components/tela-sucesso/tela-sucesso.component';
 import { TelaConsultaComponent } from './telas/tela-consulta/tela-consulta.component';
-import { TelaBaseComponent } from './telas/tela-base/tela-base.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatIconModule} from '@angular/material/icon';
+import { NavComponent } from './components/nav/nav.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TelaSucessoComponent,
     TelaConsultaComponent,
-    TelaBaseComponent
+    NavComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

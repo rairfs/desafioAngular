@@ -1,13 +1,3 @@
-.all {
-    display: flex;
-    flex-direction: row;
-}
-
-.all .body {
-    /* padding: 15px; */
-    width: 100%;
-}
-
 .nav-lat {
     display: flex;
     height: 100vh;

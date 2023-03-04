@@ -1,51 +1,42 @@
-<div class="all">
-    <div class="topo">
-        <div class="titulo">
-            <h1>{{titulo}}</h1>
-            <h6>{{caminho}}</h6>
-        </div>
-        <div class="dados-usuario">
-            <mat-icon>notifications_none</mat-icon>
-            <div class="viacredi">
-                <p>VIACREDI</p>
-            </div>
-            <img src="../../../assets/acc.jpg" alt="" srcset="">
-        </div>
-    </div>
-    <div class="corpo">
-        <ul class="barra-progresso">
-            <li class="step step1">Início</li>
-            <li class="step step2">Documentos</li>
-            <li class="step step3">Dados cadastrais</li>
-            <li class="step step4">Admissão</li>
-        </ul>
-
-        <div class="pesquisa-cpf">
-            <div class="info">
-                <h3>Informe o CPF do futuro cooperado (a)</h3>
-                <h6>Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente. Digite apenas os números (sem pontos ou traços).</h6>
-            </div>
-            <div class="campos-pesquisa">
-                <div class="input">
-                    <label for="">CPF</label>
-                    <input (input)="formataInput()" [(ngModel)]="cpf" type="text" name="cpf" maxlength="14">
+<div class="container-geral">
+    <app-nav></app-nav>
+    <div class="all">
+        <app-header titulo="NOVA ADMISSÃO COOPERADO" caminho="Cadastro / Admissão do Cooperado / Nova Admissão do Cooperado"></app-header>
+        <div class="corpo">
+            <ul class="barra-progresso">
+                <li class="step step1">Início</li>
+                <li class="step step2">Documentos</li>
+                <li class="step step3">Dados cadastrais</li>
+                <li class="step step4">Admissão</li>
+            </ul>
+    
+            <div class="pesquisa-cpf">
+                <div class="info">
+                    <h3>Informe o CPF do futuro cooperado (a)</h3>
+                    <h6>Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente. Digite apenas os números (sem pontos ou traços).</h6>
                 </div>
-                <button class="btn-busca" (click)="onConsultar()" [class.valido]="isCpfValido" [disabled]="isCpfValido">Consultar por CPF</button>
-            </div>
-            <div class="resultado">
-                <div class="erro" *ngIf="mensagemErro.length > 0">
-                    <p>{{mensagemErro}}</p>
+                <div class="campos-pesquisa">
+                    <div class="input">
+                        <label for="">CPF</label>
+                        <input (input)="formataInput()" [(ngModel)]="cpf" type="text" name="cpf" maxlength="14">
+                    </div>
+                    <button class="btn-busca" (click)="onConsultar()" [class.valido]="isCpfValido" [disabled]="isCpfValido">Consultar por CPF</button>
                 </div>
-                <div class="sucesso" *ngIf="pessoa">
-                    <app-tela-sucesso [pessoa]="pessoa"></app-tela-sucesso>
+                <div class="resultado">
+                    <div class="erro" *ngIf="mensagemErro.length > 0">
+                        <p>{{mensagemErro}}</p>
+                    </div>
+                    <div class="sucesso" *ngIf="pessoa">
+                        <app-tela-sucesso [pessoa]="pessoa"></app-tela-sucesso>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="botoes">
-        <div class="btn-box">
-            <button class="start" *ngIf="isCpfValido">Iniciar nova admissão</button>
-            <button class="tips">Dicas para admissão</button>
+        <div class="botoes">
+            <div class="btn-box">
+                <button class="start" *ngIf="isCpfValido">Iniciar nova admissão</button>
+                <button class="tips">Dicas para admissão</button>
+            </div>
         </div>
     </div>
 </div>
