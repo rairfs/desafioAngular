@@ -47,6 +47,10 @@
     flex-direction: column;
 }
 
+.card-pessoa .container-nome .nome :first-child {
+    font-weight: bold;
+}
+
 .card-pessoa .container-status {
     display: flex;
     flex-direction: row;
@@ -62,6 +66,10 @@
 .card-pessoa .container-status .status {
     display: flex;
     flex-direction: column;
+}
+
+.card-pessoa .container-status .status :first-child {
+    font-weight: bold;
 }
 
 .contas {
@@ -111,6 +119,10 @@
 .card-conta .container-dados .dados-conta {
     display: flex;
     flex-direction: column;
+}
+
+.card-conta .container-dados .dados-conta :first-child{
+    font-weight: bold;
 }
 
 .card-conta a {

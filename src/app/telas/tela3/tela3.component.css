@@ -1,0 +1,15 @@
+.container-geral {
+    display: flex;
+    flex-direction: row;
+}
+
+.all {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.all .corpo{
+    background-color: var(--background-ailos-1);
+    height: var(--tamanho-corpo);
+}

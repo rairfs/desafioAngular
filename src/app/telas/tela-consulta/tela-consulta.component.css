@@ -10,7 +10,7 @@
 
 .corpo {
     height: var(--tamanho-corpo);
-    background-color: #e7eef1;
+    background-color: var(--background-ailos-1);
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -79,12 +79,12 @@
 
 .barra-progresso li:first-child::before{
     content: '';
-    background-color: #e7eef1;
-    border: 2px solid #0a3c52;
+    background-color: var(--background-ailos-1);
+    border: 2px solid var(--azul-ailos);
 }
 
 .step1 {
-    color: #0a3c52;
+    color: var(--azul-ailos);
 }
 
 .barra-progresso li:first-child::after{
@@ -130,7 +130,7 @@ input:focus{
 .campos-pesquisa button {
     height: 35px;
     width: 12%;
-    background-color: #0a3c52;
+    background-color: var(--azul-ailos);
     color: #e7eef1;
     border: none;
     border-radius: 3px;
@@ -177,7 +177,7 @@ input:focus{
     height: 2.3rem;
     color: white;
     border: none;
-    background-color: #0a3c52;
+    background-color: var(--azul-ailos);
     border-radius: 3px;
 }
 
@@ -191,8 +191,8 @@ input:focus{
     font-weight: bolder;
     width: 10%;
     height: 2.3rem;
-    color: #0a3c52;
-    border: 1px solid #0a3c52;
+    color: var(--azul-ailos);
+    border: 1px solid var(--azul-ailos);
     background-color: white;
     border-radius: 3px;
 }
