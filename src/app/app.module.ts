@@ -17,6 +17,8 @@ import { Tela3Component } from './telas/tela3/tela3.component';
 import { Tela4Component } from './telas/tela4/tela4.component';
 import { Tela5Component } from './telas/tela5/tela5.component';
 import { Tela6Component } from './telas/tela6/tela6.component';
+import { NotificacaoComponent } from './components/notificacao/notificacao.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { Tela6Component } from './telas/tela6/tela6.component';
     Tela3Component,
     Tela4Component,
     Tela5Component,
-    Tela6Component
+    Tela6Component,
+    NotificacaoComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,

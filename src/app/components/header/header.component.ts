@@ -10,9 +10,20 @@ export class HeaderComponent {
   @Input() titulo: string;
   @Input() caminho: string;
 
+  isUserBarActive: boolean;
+
   constructor() {
     this.titulo = '';
     this.caminho = '';
+    this.isUserBarActive = false;
+  }
+
+  onFocusOut() {
+    this.isUserBarActive = false;
+  }
+
+  onFocusIn() {
+    this.isUserBarActive = !this.isUserBarActive;
   }
 
 }
