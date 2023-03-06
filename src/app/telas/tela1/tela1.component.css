@@ -1,12 +1,14 @@
 .container-geral {
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
 
 .all {
     display: flex;
     width: 100%;
     flex-direction: column;
+    height: 100%;
 }
 
 .all .corpo{
@@ -15,5 +17,5 @@
 }
 
 app-nav {
-    width: var(--tamanho-nav);
+    width: 4%;
 }

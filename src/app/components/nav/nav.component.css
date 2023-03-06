@@ -1,6 +1,6 @@
 .nav-lat {
     display: flex;
-    height: 100vh;
+    min-height: 100%;
     min-width: 55px;
     align-items: center;
     flex-direction: column;

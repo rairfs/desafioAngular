@@ -2,18 +2,24 @@
 .container-geral {
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
 
 app-nav {
-    width: var(--tamanho-nav);
+    position: relative;
+    width: 4%;
+    height: 100%;
 }
 
 .all {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+
 }
 
 .corpo {
-    height: var(--tamanho-corpo);
+    height: 82%;
     background-color: var(--background-ailos-1);
     padding: 15px;
     display: flex;
