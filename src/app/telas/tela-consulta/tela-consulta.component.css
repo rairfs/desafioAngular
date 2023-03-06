@@ -19,7 +19,7 @@ app-nav {
 }
 
 .corpo {
-    height: 82%;
+    height: var(--tamanho-corpo);
     background-color: var(--background-ailos-1);
     padding: 15px;
     display: flex;
@@ -169,7 +169,7 @@ input:focus{
 }
 
 .botoes {
-    height: calc(91.5vh - var(--tamanho-corpo));
+    height: calc(100% - var(--tamanho-corpo));
     padding: 1%;
 }
 
