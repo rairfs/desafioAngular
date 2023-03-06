@@ -14,8 +14,11 @@ export class TelaConsultaComponent implements OnInit {
   cpf: string = '';
   mensagemErro: string = '';
   pessoa?: Pessoa | null;
+  isHovered: boolean;
   
-  constructor(private cpfService: CpfService){}
+  constructor(private cpfService: CpfService){
+    this.isHovered = false;
+  }
 
   ngOnInit(): void {
     
@@ -82,8 +85,17 @@ export class TelaConsultaComponent implements OnInit {
     return true;
   }
 
+  onMouseEnter(){
+    this.isHovered = true;
+  }
+
+  onMouseLeave() {
+    this.isHovered = false;
+  }
+
   duplicarConta(){
     
   }
+
 
 }

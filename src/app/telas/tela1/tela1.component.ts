@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class Tela1Component {
 
+  isHovered: boolean;
+
+  constructor () {
+    this.isHovered = false;
+  }
+
+  onMouseEnter(){
+    this.isHovered = true;
+  }
+
+  onMouseLeave() {
+    this.isHovered = false;
+  }
 }

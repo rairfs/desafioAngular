@@ -22,6 +22,11 @@ app-nav {
     height: 100%;
 }
 
+.hovered {
+    width: 8%;
+}
+
+
 .rodape {
     height: calc(100% - var(--tamanho-corpo));
 }

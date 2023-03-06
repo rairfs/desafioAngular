@@ -1,5 +1,5 @@
 <div class="container-geral">
-    <app-nav [pagina]="5"></app-nav>
+    <app-nav [pagina]="5" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" [class.hovered]="isHovered"></app-nav>
     <div class="all">
         <app-header titulo="Página 5" caminho="Página 5"></app-header>
         <div class="corpo"></div>

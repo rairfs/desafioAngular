@@ -1,5 +1,5 @@
 <div class="container-geral">
-    <app-nav></app-nav>
+    <app-nav (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" [class.hovered]="isHovered"></app-nav>
     <div class="all">
         <app-header titulo="Home" caminho="Home"></app-header>
         <div class="corpo">
