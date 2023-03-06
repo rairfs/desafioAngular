@@ -20,4 +20,9 @@
 app-nav {
     width: 4%;
     height: 100%;
+    position: relative;
+}
+
+.rodape {
+    height: calc(100% - var(--tamanho-corpo));
 }
